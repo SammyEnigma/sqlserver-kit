@@ -5570,6 +5570,14 @@ Scope: global or session<br />
 SQL Server Version: >= 2019 CU9, >= 2017 CU21
 
 
+<a id="12310"></a>
+#### Trace Flag: 12310
+Function: Availability groups are designed with flow control gates on the primary replica to avoid excessive resource consumption, such as network and memory resources, on all availability replicas. SQL Server 2022 (16.x) increases the limits to the number of messages that each gate allows. By using trace flag 12310, the increased limit is also available to the following versions of SQL Server: SQL Server 2019 (15.x) CU9, SQL Server 2017 (14.x) CU18, SQL Server 2016 (13.x) SP1 CU16.<br />
+Link: https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups?tabs=new-limits#flow-control-gates<br />
+Scope: global<br />
+SQL Server Version: >= 2019 CU9, >= 2017 CU18, >= 2016 SP1 CU16
+
+
 <a id="12311"></a>
 #### Trace Flag: 12311
 Function: After TF [12306](#12306) is enabled, you can further enable 12311 trace flag that represent maximum group commit times of **1ms**. This TF is additive whith [12312](#12312), [12314](#12314), and [12318](#12318). The maximum group commit time setting is capped at 10ms. However, these should not be repeated. For example, do not specify the same TF more than one time.<br />
